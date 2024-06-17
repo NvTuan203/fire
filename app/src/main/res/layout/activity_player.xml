@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#17171A"
+    android:padding="50dp"
+    android:gravity="center_horizontal"
+    tools:context=".PlayerActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp">
+
+        <ImageView
+            android:id="@+id/songs_cover_image_view"
+            android:layout_width="325dp"
+            android:layout_height="325dp" />
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        tools:text="Song name"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+
+        android:textStyle="bold"
+        android:id="@+id/songs_title_text_view"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:text="Album"
+        android:textColor="@color/white"
+        android:id="@+id/songs_subtitle_text_view"/>
+
+    <androidx.media3.ui.PlayerView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        app:hide_on_touch="false"
+        app:show_timeout="0"
+        android:id="@+id/player_view"
+        />
+</LinearLayout>
